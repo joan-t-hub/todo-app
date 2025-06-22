@@ -103,6 +103,7 @@ img{
 }
 footer {
     bottom: 0;
+    position: fixed;
     width: 100%;
     background-color: #212224;
     color: white;
@@ -158,4 +159,6 @@ footer {
   background: #dc3545 !important;
   color: #fff !important;
 }
-    
+body{
+  max-height: 50vh;
+}
