@@ -1,0 +1,161 @@
+.default-padding{
+  padding-left: 7vh;
+}
+.column1{
+    background-color: rgb(30,22,20);
+}
+ul.checkbox-list {
+  padding: 0;
+  list-style: none;
+  max-height:min-content;
+  scrollbar-width: thin;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  background-color: #212224;
+  color: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  font: 1.2em sans-serif;
+  transition: background-color 0.3s;
+}
+
+.custom-checkbox:hover {
+  background-color: #2a2b2e;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+  transition: background-color 0.2s, border 0.2s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: orange;
+  border: 2px solid orange;
+}
+
+.bouton{
+    margin-left: 90%;
+    position:initial sticky;
+    z-index: 2;
+}
+#addTo-do{
+    border: 0vh;
+    border-radius: 50%;
+    background-color: rgb(48, 122, 245);
+    width: 8vh;
+    height: 8vh;
+    font-size: 200%;
+    text-align: center;
+    box-shadow: 0vh 0.7vh 0.9vh rgba(48, 122, 245, 0.7);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    color: white;}
+#addTo-do:hover{
+    background-color: rgba(83, 141, 233, 0.7);
+}
+.work{
+    background-color: rgb(24,4,3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-radius: 12px;
+    padding: 1vh 1vh;
+    margin: 10px 0;
+    cursor: pointer;
+    font: 0.8em sans-serif;
+    transition: background-color 0.3s;
+}
+img{
+    width: 2vh;
+    height: 2vh;
+    margin-right: 1vh;
+    transition: transform 0.2s;
+}
+.image-medium{
+    width: 4vh;
+    height: 4vh;
+    margin-right: 1vh;
+    transition: transform 0.2s;
+}
+.clear-bg{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2em;
+}
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #212224;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+}
+.dropdown-menu-animate-up {
+            animation: fadeInUp 0.3s ease-in-out;
+            position: absolute;
+            top: 100%;
+            /* Remplacer right: 0 par left pour un meilleur contrôle */
+            left: -100px; /* Ajuster pour aligner sous le bouton */
+            min-width: 200px; /* Largeur minimale pour le contenu */
+            z-index: 1000;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ajuster pour les petits écrans */
+        @media (max-width: 576px) {
+            .dropdown-menu-animate-up {
+                left: -150px; /* Ajuster pour mobile */
+                min-width: 180px;
+            }
+        }
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.selected-todo {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.important-action {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.important-notification {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+    

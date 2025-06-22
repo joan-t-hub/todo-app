@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML Page</title>
+        <link rel="stylesheet" href="style/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/index.css">
+        <script src="script/index.js" defer></script>
+        <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+        <meta name="description" content="A simple HTML page with a header, main content, and footer.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, simple page"> 
+        <meta name="author" content="Your Name">
+        <meta name="theme-color" content="#ffffff">
+        <meta property="og:title" content="Simple HTML Page">
+    </head>
+    <body class="row text-white bg-dark">
+        <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="notificationModalLabel">Ajouter un to-do</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addTodoForm">
+                            <div class="mb-3">
+                                <label for="todoText" class="form-label">Nouvelle tâche</label>
+                                <input type="text" class="form-control" id="todoText" required autocomplete="off">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Ajouter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="col-md-5 column1 text-white default-padding">
+                    <button id="clickMe">Click Me!</button><br><br>
+                    <div class="align-items-stretch d-flex flex-row justify-content-between">
+                        <button class="text-center clear-bg">Work <img src="/images/arrows_14025518.png"></button>
+                        <button class="text-center clear-bg">
+                            <img src="/images/4243313_ux_basic_app_menu_icon.png" alt="Menu Icon" class="image-medium">
+                        </button>
+                    </div>
+                    <br>
+                    <p>No Date</p>
+                    <hr>
+                    <ul class="checkbox-list" id="checkboxList">
+                        <li>
+                            <label class="custom-checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            Chambre
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            Hall
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            Ancien labo
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            Habits, chaussures
+                            </label>
+                        </li>
+                        <li>
+                            <label class="custom-checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            Autres
+                            </label>
+                        </li>
+                    </ul>
+
+                    <h5 class="mt-4">COMPLETED</h5>
+                    <ul class="checkbox-list" id="completedList">
+                        <!-- Les tâches complétées apparaîtront ici -->
+                    </ul>
+
+                    <div class="bouton">
+                        <button id="addTo-do" class="text-white" data-bs-toggle="modal" data-bs-target="#notificationModal">+</button>
+                    </div>
+                    <div class="align-items-stretch d-flex flex-row justify-content-around" style="margin-bottom: 2vh;">
+                        <button class="text-center clear-bg"><img src="/images/note_120060.png" class="image-medium"><br>Notes</button>
+                        <button class="text-center clear-bg text-primary"><img src="/images/check_15863102.png" class="image-medium"><br>To-dos</button>
+                    </div>
+                </div>
+                <div class="col-md-7 bg-black text-white default-padding">
+                    <div class="align-items-stretch d-flex flex-row justify-content-between">
+                        <button class="work">Work <img src="/images/arrows_14025518.png"></button>
+                    </div>
+                    <div>
+                        <ul class="checkbox-list" id="actionsList">
+                            <li>
+                                <!-- Le to-do sélectionné sera affiché ici -->
+                                 <label class="custom-checkbox" id="selectedTodoDisplay"></label>
+                            </li>
+                            <li id="addReminderAction" style="cursor:pointer;">
+                                <label class="custom-checkbox" id="addReminderAction">
+                                     <img src="/images/notification_8137272.png" class="image-medium">
+                                    Add reminder</label>
+                            </li>
+                            <li><label class="custom-checkbox">
+                                <img src="/images/alert_11695666.png" class="image-medium">Mark as important</label></li>
+                            <li><label class="custom-checkbox">
+                            <img src="/images/sort.png" class="image-medium">Remarks</label></li>
+                        </ul>
+                    </div>
+                    <div class="align-items-stretch d-flex flex-row justify-content-around">
+                        <button class="text-center clear-bg"><img src="/images/share.png" class="image-medium"><br>Share</button>
+                        <button class="text-center clear-bg"><img src="/images/delete.png" class="image-medium" alt="Delete"><br>Delete</button>
+                    </div>
+                </div>
+        
+        <script src="style/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Modale pour l'ajout de rappel -->
+        <div class="modal fade" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-white">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reminderModalLabel">Ajouter un rappel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="reminderTodoName" class="mb-3 fw-bold text-primary"></div>
+                        <form id="reminderForm">
+                            <div class="mb-3">
+                                <label for="reminderDatetime" class="form-label">Date et heure du rappel</label>
+                                <input type="datetime-local" class="form-control" id="reminderDatetime" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enregistrer le rappel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer class="text-center mt-4">
+            <p>&copy; 2025 Jojo Mathi🦊</p>
+    </footer>
+
+</html>
